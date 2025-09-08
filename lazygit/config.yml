@@ -1,0 +1,14 @@
+gui:
+  parseEmoji: true
+os:
+  edit: "code {{filename}}"
+
+customCommands:
+  - key: "<c-t>"
+    context: "global"
+    description: "Ghostty (zsh): open repo in a new tab"
+    command: 'zsh -lc ''open -a Ghostty "$(git rev-parse --show-toplevel)"'''
+  - key: "<c-o>"
+    context: "global"
+    description: "open repo in VSCode"
+    command: 'zsh -lc ''code "$(git rev-parse --show-toplevel)"'''
